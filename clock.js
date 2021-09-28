@@ -12,15 +12,15 @@ function updateClock() {
         var greeting = "Good Morning";
     }
     else if(h>=12 && h<17){
-        var greeting = "Good Afternoon"
+        var greeting = "Good Afternoon";
     }
     else if(h>=17 && h<=20)
     {
-        var greeting = "Good Evening"
+        var greeting = "Good Evening";
     }
-    else if(h>=21 && h<4)
+    else if(h>=21)
     {
-        var greeting = "Good Night"
+        var greeting = "Good Night";
     }
 }
 
