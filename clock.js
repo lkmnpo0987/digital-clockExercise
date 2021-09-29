@@ -7,7 +7,6 @@ function updateClock() {
 
     let timeOfDay = (Hour < 12) ? "AM" : "PM"
     let h = Hour % 12;
-    for (h = 1; h <= 24; h++) {
         if (h >= 4 && h < 12) {
             var greeting = "Good Morning";
         }
@@ -20,7 +19,6 @@ function updateClock() {
         else if (h >= 21) {
             var greeting = "Good Night";
         }
-    }
 
 
     document.getElementById("greeting").innerText = greeting;
