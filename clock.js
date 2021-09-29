@@ -6,30 +6,33 @@ function updateClock() {
     let Seconds = Time.getSeconds();
 
     let timeOfDay = (Hour < 12) ? "AM" : "PM"
-    let h = Hour;
-        if (h >= 4 && h < 12) {
+   
+        
+        if (Hour >= 4 && Hour < 12) {
             var greeting = "Good Morning";
         }
-        else if (h >= 12 && h < 17) {
+        else if (Hour >= 12 && Hour < 17) {
             var greeting = "Good Afternoon";
         }
-        else if (h >= 17 && h <= 20) {
+        else if (Hour >= 17 && Hour <= 20) {
             var greeting = "Good Evening";
         }
-        else if (h >= 21) {
+        else if (Hour >= 21 && Hour<=24) {
             var greeting = "Good Night";
         }
+
 
 
     document.getElementById("greeting").innerText = greeting;
 
     Minutes = (Minutes < 10 ? "0" : "") + Minutes;
     Seconds = (Seconds < 10 ? "0" : "") + Seconds;
-    Hour = Hour < 10 ? `0${Hour}` : Hour;
-
+    
+    
     Hour = (Hour > 12) ? Hour - 12 : Hour;
     Hour = (Hour == 0) ? 12 : Hour;
-
+    Hour = (Hour < 10 ? "0" : "") + Hour;
+    
     let TimeStr = Hour + ":" + Minutes + ":" + Seconds + " " + timeOfDay
 
     document.getElementById("clock").innerHTML = TimeStr
@@ -55,3 +58,6 @@ function updateDate() {
 
     document.getElementById("date").innerHTML = dateStr
 }
+
+       
+        
