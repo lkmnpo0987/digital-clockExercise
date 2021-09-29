@@ -6,7 +6,7 @@ function updateClock() {
     let Seconds = Time.getSeconds();
 
     let timeOfDay = (Hour < 12) ? "AM" : "PM"
-    let h = Hour % 12;
+    let h = Hour;
         if (h >= 4 && h < 12) {
             var greeting = "Good Morning";
         }
